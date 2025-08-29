@@ -1,0 +1,19 @@
+@import "tailwindcss";
+:root {
+  --color-primary: #FE7743;
+  --color-secondary: #273F4F;
+  --color-tertiary: #447D9B;
+  --color-quaternary: #D7D7D7;
+}
+/* Custom styles for WordPress theme */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Remove default WordPress margins */
+.site-main {
+  margin: 0;
+  padding: 0;
+}
