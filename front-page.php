@@ -27,7 +27,7 @@ get_header() ?>
      This is the main content area specifically for the homepage.
      It uses Tailwind CSS classes for responsive layout and styling.
 -->
-<main id="main" class="site-main flex size-full grow bg-gray-50 justify-center">
+<main id="main" class="site-main min-h-screen flex size-full grow bg-gray-50 justify-center">
     
          <!-- ============================================================================
           HOMEPAGE TITLE

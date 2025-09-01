@@ -87,6 +87,102 @@ DB_PASSWORD:
 DB_NAME: Yavar
 </code></pre>
   <hr />
+  <h3 dir="ltr"><a href="#a-complete-document-for-installing-tailwind-css-with-vite">Wordpress space</a></h3>
+  <h3><a href="#%D8%AF%D8%A7%DA%A9%DB%8C%D9%88%D9%85%D9%86%D8%AA-%DA%A9%D8%A7%D9%85%D9%84-%D9%86%D8%B5%D8%A8-tailwind-css-%D8%A8%D8%A7-vite">محیط وردپرس</a></h3>
+ -----
+
+## 📄 Site Settings
+
+## 📄 تنظیمات سایت
+
+To complete the initial setup and match the theme's default appearance, follow these steps to configure your logo, menus, and date/time formats.
+
+برای تکمیل راه‌اندازی اولیه و هماهنگ شدن با ظاهر پیش‌فرض تم، مراحل زیر را برای تنظیمات لوگو، فهرست‌ها و فرمت تاریخ و زمان دنبال کنید.
+
+-----
+
+### 🎨 Logo & Site Icon
+
+### 🎨 لوگو و نمادک سایت
+
+To upload and set your site’s logo and icon, you need to use two separate sections in your WordPress dashboard.
+
+برای بارگذاری و تنظیم لوگو و نمادک سایت خود، باید از دو بخش جداگانه در پنل مدیریت وردپرس استفاده کنید.
+
+1.  **Site Icon:**
+      * Go to **Settings > General**.
+      * Find the **Site Icon** field at the bottom of the page to upload your icon.
+      * Click **Save Changes**.
+
+<p dir="rtl" class="text-right"><strong>نمادک سایت (Favicon):</strong></p>
+<ul dir="rtl" class="text-right">
+<li>از پنل مدیریت به بخش **تنظیمات > عمومی** بروید.</li>
+<li>در پایین صفحه، در قسمت **نمادک سایت**، آیکون مورد نظر خود را بارگذاری کنید.</li>
+<li>بر روی **ذخیره تغییرات** کلیک کنید.</li>
+</ul>
+
+2.  **Site Logo:**
+      * Go to **Site Preview > Customize > Site Identity > Logo**.
+      * Upload your site’s logo.
+      * Click **Publish**.
+
+<p dir="rtl" class="text-right"><strong>لوگو سایت:</strong></p>
+<ul dir="rtl" class="text-right">
+<li>به بخش **بازدید سایت > سفارشی‌سازی > هویت سایت > نشان** بروید.</li>
+<li>لوگوی سایت خود را بارگذاری کنید.</li>
+<li>بر روی **انتشار** کلیک کنید.</li>
+</ul>
+
+-----
+
+### 📋 Menus
+
+### 📋 فهرست‌ها
+
+To manage the website's navigation menus, use the customization panel.
+
+برای مدیریت فهرست‌های ناوبری وب‌سایت، از پنل سفارشی‌سازی استفاده کنید.
+
+1.  **Header Menu:**
+      * Go to **Site Preview > Customize > Menus > Header**.
+      * From here, you can add, remove, and reorder menu items.
+      * Click **Publish** to save your changes.
+
+<p dir="rtl" class="text-right"><strong>فهرست سربرگ (Header):</strong></p>
+<ul dir="rtl" class="text-right">
+<li>به بخش **بازدید سایت > سفارشی‌سازی > فهرست‌ها > Header** بروید.</li>
+<li>از اینجا می‌توانید آیتم‌های منو را اضافه، حذف یا مرتب کنید.</li>
+<li>برای ذخیره تغییرات، بر روی **انتشار** کلیک کنید.</li>
+</ul>
+
+-----
+
+### 📅 Date and Time Format
+
+### 📅 فرمت تاریخ و زمان
+
+To ensure dates and times are displayed correctly, set the standard format in your general settings.
+
+برای اطمینان از نمایش صحیح تاریخ و زمان، فرمت استاندارد را در تنظیمات عمومی خود تنظیم کنید.
+
+1.  **Date Format:**
+
+      * Go to **Settings > General > Date Format**.
+      * Select `Y-m-d`.
+
+2.  **Time Format:**
+
+      * Go to **Settings > General > Time Format**.
+      * Select `H:i`.
+      * Click **Save Changes**.
+
+<p dir="rtl" class="text-right"><strong>فرمت تاریخ و زمان:</strong></p>
+<ul dir="rtl" class="text-right">
+<li>به بخش **تنظیمات > عمومی > ساختار تاریخ** بروید و `Y-m-d` را انتخاب کنید.</li>
+<li>سپس به بخش **تنظیمات > عمومی > ساختار زمان** بروید و `H:i` را انتخاب کنید.</li>
+<li>در نهایت، بر روی **ذخیره تغییرات** کلیک کنید.</li>
+</ul>
+  <hr />
   <h3 dir="ltr"><a href="#a-complete-document-for-installing-tailwind-css-with-vite">A Complete Document for Installing Tailwind CSS with Vite</a></h3>
   <h3><a href="#%D8%AF%D8%A7%DA%A9%DB%8C%D9%88%D9%85%D9%86%D8%AA-%DA%A9%D8%A7%D9%85%D9%84-%D9%86%D8%B5%D8%A8-tailwind-css-%D8%A8%D8%A7-vite">داکیومنت کامل نصب Tailwind CSS با Vite</a></h3>
   <h4 dir="ltr"><a href="#prerequisites-installing-nodejs-and-npm">1. Prerequisites: Installing Node.js and npm</a></h4>

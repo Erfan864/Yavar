@@ -17,7 +17,7 @@ export default defineConfig({
         // Generate separate CSS file
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith('.css')) {
-            return 'style.css'
+            return 'styles.css'
           }
           return assetInfo.name
         },

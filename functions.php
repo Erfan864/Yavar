@@ -100,7 +100,7 @@ function yavar_enqueue_styles()
 
 
   // Enqueue main theme stylesheet
-  $style_file = get_template_directory() . '/src/style.css';
+  $style_file = get_template_directory() . '/style.css';
   wp_enqueue_style(
     'yavar-style',                                    // Handle name for the stylesheet
     $style_file,                                      // Path to the stylesheet
@@ -110,8 +110,8 @@ function yavar_enqueue_styles()
 
   // This is the compiled CSS file that includes Tailwind CSS and custom styles
   // Fallback system: If compiled CSS doesn't exist, use source CSS
-  $src_style_file = get_template_directory() . '/dist/style.css';
-  $style_path = get_template_directory_uri() . '/dist/style.css';
+  $src_style_file = get_template_directory() . '/dist/styles.css';
+  $style_path = get_template_directory_uri() . '/dist/styles.css';
   $style_version = file_exists($src_style_file) ? filemtime($src_style_file) : '1.0.0';
 
   wp_enqueue_style(

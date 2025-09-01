@@ -1,4 +1,4 @@
-import './src/style.css'
+import './style.css'
 import { setupCounter } from './lib/main.js'
 
 // Wait for DOM to be ready

@@ -5,7 +5,7 @@
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "style.css"
+      "styles.css"
     ]
   }
 }

@@ -55,13 +55,6 @@ if (!defined('ABSPATH')) {
      
      The body element contains all visible content.
      WordPress body_class() adds dynamic CSS classes based on current page.
-     
-     Tailwind Classes:
-     - min-h-screen: Minimum height of 100vh (full viewport height)
-     - flex: Creates a flexbox container
-     - flex-col: Sets flex direction to column
-     - items-stretch: Stretches child elements to fill container
-     - font-Pahlavan: Applies the Pahlavan font family
 -->
 
 <body <?php body_class("min-h-screen relative flex flex-col items-stretch font-pahlavan"); ?>>

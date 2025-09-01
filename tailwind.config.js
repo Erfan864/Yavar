@@ -3,7 +3,7 @@ export default {
   content: [
     "./*.{php}",
     "./main.js",
-    "./src/style.css",
+    "./style.css",
     "./**/*.php",
     "./**/*.js"
   ],
