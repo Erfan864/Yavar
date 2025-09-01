@@ -1,7 +1,46 @@
-<?php wp_footer(); ?>
-<footer class="flex-none flex size-full justify-center items-center py-5 bg-(--color-quaternary)">
-    <p>این یک فوتر است</p>
-</footer>
-</body>
+<?php
+/**
+ * ============================================================================
+ * FOOTER.PHP - FOOTER TEMPLATE
+ * ============================================================================
+ * 
+ * This template contains the footer section of the website.
+ * It includes WordPress footer hooks and closing HTML tags.
+ * 
+ * @package Yavar
+ * @version 1.0.0
+ */
 
+// WordPress footer hook - loads necessary scripts and admin bar
+// This is required for proper WordPress functionality
+wp_footer(); ?>
+
+<!-- ============================================================================
+     FOOTER CONTENT AREA
+     ============================================================================
+     
+     This is the main footer content area.
+     It uses Tailwind CSS classes for responsive layout and styling.
+-->
+<footer class="flex-none flex size-full justify-center items-center py-5 bg-gray-300">
+    
+    <!-- ============================================================================
+         FOOTER TEXT
+         ============================================================================
+         
+         Display footer text content.
+         Currently shows a placeholder message in Persian.
+    -->
+    <p>این یک فوتر است</p>
+    
+</footer>
+
+<!-- ============================================================================
+     CLOSING HTML TAGS
+     ============================================================================
+     
+     Close the body and html tags that were opened in header.php.
+     These tags are essential for valid HTML structure.
+-->
+</body>
 </html>

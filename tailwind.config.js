@@ -1,10 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.php",
-    "./front-page.php",
-    "./header.php", 
-    "./footer.php",
+    "./*.{php}",
     "./main.js",
     "./src/style.css",
     "./**/*.php",
@@ -14,6 +11,14 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+        'pahlavan': ['var(--font-pahlavan)'],
+        'iranyekanx': ['var(--font-iranyekanx)'],
+      },
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        tertiary: 'var(--color-tertiary)',
+        quaternary: 'var(--color-quaternary)',
       },
     },
   },

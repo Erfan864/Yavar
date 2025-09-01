@@ -1,19 +1,76 @@
+/*
+ * ============================================================================
+ * YAVAR WORDPRESS THEME STYLESHEET
+ * ============================================================================
+ * 
+ * This is the main stylesheet for the Yavar WordPress theme.
+ * It contains theme information, CSS custom properties, and custom styles.
+ * 
+ * Theme Name: Yavar
+ * Author: Erfan Saeedi
+ * Description: Yavar website - A modern WordPress theme with Tailwind CSS
+ * Version: 1.0
+ * Requires at least: 5.8
+ * Tested up to: 6.4
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template: Yavar
+ */
+
+/* ============================================================================
+  * TAILWIND CSS IMPORT
+  * ============================================================================
+  * 
+  * Import Tailwind CSS framework for utility-first styling.
+  * This provides a comprehensive set of utility classes for rapid development.
+  */
+
 @import "tailwindcss";
-:root {
-  --color-primary: #FE7743;
-  --color-secondary: #273F4F;
-  --color-tertiary: #447D9B;
-  --color-quaternary: #D7D7D7;
-}
-/* Custom styles for WordPress theme */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+/* ============================================================================
+ * CSS CUSTOM PROPERTIES (CSS VARIABLES)
+ * ============================================================================
+ * 
+ * These variables define the theme's color palette and can be easily
+ * modified to change the entire theme's color scheme.
+ */
+
+@theme {
+  /* Primary brand color - used for main elements and highlights */
+  --color-primary: #55b9bd;
+
+  /* Secondary brand color - used for accents and secondary elements */
+  --color-secondary: #c7853b;
+
+  /* Tertiary brand color - used for success states and additional accents */
+  --color-tertiary: #6eaa46;
+
+  /* Quaternary brand color - used for backgrounds and subtle highlights */
+  --color-quaternary: #f6f5bd;
+  
+  /* including font for Farsi contents */
+  --font-pahlavan: Pahlavan;
+  --font-iranyekanx: IRANYekanX;
 }
 
-/* Remove default WordPress margins */
+/* ============================================================================
+ * CUSTOM THEME STYLES
+ * ============================================================================
+ * 
+ * These styles override default browser and WordPress styles
+ * to ensure consistent appearance across the theme.
+ */
+
+/* Base body styles for consistent typography and layout */
+body {
+  margin: 0; /* Remove default browser margins */
+  padding: 0; /* Remove default browser padding */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; /* Modern font stack */
+}
+
+/* Remove default WordPress margins from main content area */
+/* This ensures full-width layouts and proper spacing control */
 .site-main {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Remove WordPress default margins */
+  padding: 0; /* Remove WordPress default padding */
 }
