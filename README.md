@@ -107,57 +107,16 @@ DB_NAME: Yavar
 npm -v
 </code></pre>
   <hr />
-  <h4><a href="#%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF-%D9%BE%D8%B1%D9%88%DA%98%D9%87%D9%80%DB%8C-%D8%AC%D8%AF%DB%8C%D8%AF-vite">2. ایجاد پروژه‌ی جدید Vite</a></h4>
-  <h4 dir="ltr"><a href="#creating-a-new-vite-project">2. Creating a New Vite Project</a></h4>
-  <p>برای شروع، یک پروژه‌ی جدید Vite در مسیر صحیح ایجاد کنید.</p>
-  <p dir="ltr">To begin, create a new Vite project in the correct directory.</p>
-  <ul>
-    <li><strong>انتقال به مسیر تم</strong>: ابتدا به مسیر <code>wordpress/wp-content/themes/</code> بروید.</li>
-    <li dir="ltr"><strong>Navigate to Theme Directory</strong>: First, navigate to the <code>wordpress/wp-content/themes/</code> directory.</li>
-  </ul>
-  <pre dir="ltr"><code>cd wordpress/wp-content/themes/
-</code></pre>
-  <ul>
-    <li><strong>دستور ایجاد پروژه</strong>: دستور زیر را در ترمینال وارد کنید. نام پروژه باید <code>Yavar</code> باشد.</li>
-    <li dir="ltr"><strong>Project Creation Command</strong>: Enter the following command in your terminal. The project name must be <code>Yavar</code>.</li>
-  </ul>
-  <pre dir="ltr"><code>npm create vite@latest Yavar
-cd Yavar
-</code></pre>
-  <ul>
-    <li><strong>انتخاب فریم‌ورک</strong>: در این مرحله، Vite از شما می‌خواهد که یک فریم‌ورک (مثلاً React، Vue یا Vanilla JavaScript) و یک زبان (JavaScript یا TypeScript) انتخاب کنید. گزینه‌های مورد نظر خود را انتخاب کنید.</li>
-    <li dir="ltr"><strong>Framework Selection</strong>: At this stage, Vite will prompt you to choose a framework (e.g., React, Vue, or Vanilla JavaScript) and a language (JavaScript or TypeScript). Select your preferred options.</li>
-  </ul>
-  <hr />
-  <h4><a href="#%D9%86%D8%B5%D8%A8-tailwind-css">3. نصب Tailwind CSS</a></h4>
-  <h4 dir="ltr"><a href="#installing-tailwind-css">3. Installing Tailwind CSS</a></h4>
-  <p>Tailwind CSS و پلاگین Vite آن را از طریق npm نصب کنید.</p>
-  <p dir="ltr">Install tailwindcss and @tailwindcss/vite via npm.</p>
-  <pre dir="ltr"><code>npm install tailwindcss @tailwindcss/vite
-</code></pre>
-  <hr />
-  <h4><a href="#%D9%BE%DB%8C%DA%A9%D8%B1%D8%A8%D9%86%D8%AF%DB%8C-%D9%BE%D9%84%D8%A7%DA%AF%DB%8C%D9%86-vite">4. پیکربندی پلاگین Vite</a></h4>
-  <h4 dir="ltr"><a href="#configuring-the-vite-plugin">4. Configure the Vite Plugin</a></h4>
-  <p>پلاگین <code>@tailwindcss/vite</code> را به پیکربندی Vite اضافه کنید.</p>
-  <p dir="ltr">Add the @tailwindcss/vite plugin to your Vite configuration.</p>
-  <pre dir="ltr"><code class="language-typescript">import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
-export default defineConfig({
-  plugins: [
-    tailwindcss(),
-  ],
-})
-</code></pre>
-  <hr />
-  <h4><a href="#%D8%A7%D8%AC%D8%B1%D8%A7%DB%8C-%D9%BE%D8%B1%D9%88%DA%98%D9%87">5. اجرای پروژه</a></h4>
-  <h4 dir="ltr"><a href="#running-the-project">5. Running the Project</a></h4>
+  <h4><a href="#%D8%A7%D8%AC%D8%B1%D8%A7%DB%8C-%D9%BE%D8%B1%D9%88%DA%98%D9%87">2. اجرای پروژه</a></h4>
+  <h4 dir="ltr"><a href="#running-the-project">2. Running the Project</a></h4>
   <p>اکنون، پروژه آماده‌ی اجرا است.</p>
   <p dir="ltr">Now, your project is ready to run.</p>
   <ul>
     <li><strong>اجرای سرور توسعه</strong>:</li>
     <li dir="ltr"><strong>Running the Development Server</strong>:</li>
   </ul>
-  <pre dir="ltr"><code>npm run dev
+  <pre dir="ltr"><code>npm run build
+  npm run dev
 </code></pre>
   <p>با اجرای این دستور، Vite یک سرور توسعه‌ی محلی راه‌اندازی می‌کند و Tailwind CSS به طور خودکار کلاس‌های مورد نیاز را تولید و به CSS نهایی اضافه می‌کند.</p>
   <p dir="ltr">By running this command, Vite will start a local development server, and Tailwind CSS will automatically generate and add the necessary classes to your final CSS.</p>
