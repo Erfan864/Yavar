@@ -39,6 +39,9 @@
   /* Primary brand color - used for main elements and highlights */
   --color-primary: #55b9bd;
 
+  /* accent brand color - used for accents and secondary elements */
+  --color-accent: #faa533;
+
   /* Secondary brand color - used for accents and secondary elements */
   --color-secondary: #c7853b;
 
@@ -47,11 +50,18 @@
 
   /* Quaternary brand color - used for backgrounds and subtle highlights */
   --color-quaternary: #f6f5bd;
-  
+
+  /* Neutral brand color - used for backgrounds and subtle highlights */
+  --color-neutral: #ebebeb;
+
+  /* including font for English contents */
+  --font-script: Script;
   /* including font for Farsi contents */
-  --font-pahlavan: Pahlavan;
+  --font-test: Test;
   --font-iranyekanx: IRANYekanX;
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 /* ============================================================================
  * CUSTOM THEME STYLES
@@ -69,8 +79,34 @@ body {
 }
 
 /* Remove default WordPress margins from main content area */
-/* This ensures full-width layouts and proper spacing control */
 .site-main {
   margin: 0; /* Remove WordPress default margins */
   padding: 0; /* Remove WordPress default padding */
+}
+
+/* Ensure Swiper is full-width with no margins or padding */
+.swiper {
+  @apply w-full h-[50vh] md:h-[70vh] lg:h-[80vh] m-0 p-0;
+}
+
+.swiper-wrapper {
+  @apply w-full m-0 p-0;
+}
+
+.swiper-slide {
+  @apply w-full m-0 p-0;
+}
+
+/* Custom Swiper Pagination */
+
+.swiper-pagination-bullet {
+  @apply bg-zinc-400 w-3 h-3 mx-1 rounded-full transition-all duration-300;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-primary scale-125;
+}
+
+.swiper-content p{
+  @apply text-zinc-900 dark:text-neutral text-base md:text-lg lg:text-2xl;
 }

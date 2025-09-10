@@ -26,7 +26,7 @@ get_header() ?>
      This is the primary content area of the page.
      It uses Tailwind CSS classes for styling and layout.
 -->
-<main id="main" class="site-main min-h-screen bg-gray-50">
+<main id="main" class="site-main min-h-screen">
     
     <!-- ============================================================================
          WORDPRESS LOOP
@@ -46,7 +46,7 @@ get_header() ?>
                  Display the title of the current post/page.
                  Uses Tailwind CSS classes for styling with amber color theme.
             -->
-            <h1 class="text-4xl font-bold text-amber-600"><?php the_title(); ?></h1>
+            <h1 class="text-4xl font-bold text-black dark:text-white"><?php the_title(); ?></h1>
             
         <?php endwhile; ?>
     <?php endif; ?>

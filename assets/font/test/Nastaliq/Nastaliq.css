@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Nastaliq;
+  src: url("./IranNastaliq_1.ttf");
+}
+
+.font-nastaliq{
+    font-family: Nastaliq;
+  }

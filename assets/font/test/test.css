@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Test;
+    src: url("./Farnaz/Farnaz.ttf");
+  }
+  
+  .font-test{
+      font-family: Test;
+    }

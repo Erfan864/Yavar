@@ -84,20 +84,32 @@ add_action('after_setup_theme', 'yavar_theme_setup');
  */
 function yavar_enqueue_styles()
 {
+  // Enqueue Icon
+  wp_enqueue_style(
+    'iconscout',                              // iconscout
+    "https://unicons.iconscout.com/release/v4.2.0/css/line.css", // Icon CSS file path
+  );
+
   // Enqueue IranYekan font (Persian web font)
   // This font is used for Persian text display
   wp_enqueue_style(
-    'IranYekan-webfont',                              // Handle name for the font
+    'IranYekan-webfont',                              // FontIran
     get_template_directory_uri() . "/assets/font/IranYekan/fontiran.css", // Font CSS file path
   );
 
-  // Enqueue Pahlavan font (Persian web font)
+  // Enqueue Test font (Persian font)
   // This font is used as the primary font for the theme
   wp_enqueue_style(
-    'Pahlavan-webfont',                               // Handle name for the font
-    get_template_directory_uri() . "/assets/font/Pahlavan/pahlavan.css", // Font CSS file path
+    'Test-font',                               // Test
+    get_template_directory_uri() . "/assets/font/Test/test.css", // Font CSS file path
   );
 
+  // Enqueue Script font (English font)
+  // This font is used as the primary font for the theme
+  wp_enqueue_style(
+    'Script-font',                               // Script
+    get_template_directory_uri() . "/assets/font/Script/script.css", // Font CSS file path
+  );
 
   // Enqueue main theme stylesheet
   $style_file = get_template_directory() . '/style.css';
@@ -160,24 +172,9 @@ function yavar_custom_logo_attributes($attr, $custom_logo_id)
 }
 add_filter('get_custom_logo_image_attributes', 'yavar_custom_logo_attributes', 10, 2);
 
-/* function custom_nav_menu_li_classes($classes, $item, $args)
-{
-  if ($args->theme_location == 'Header') {
-    $classes = array_filter($classes, function ($class) {
-      return !in_array($class, ['menu-item', 'menu-item-type-post_type', 'menu-item-object-page']);
-    });
-    $normal = ' text-primary hover:text-secondary px-4 py-2';
-    $active = ' bg-gray-100 dark:bg-gray-800';
-    $yavarClasses = $item->current ? $active : $normal;
-    $classes[] = $yavarClasses;
-  }
-  return $classes;
-}
-add_filter('nav_menu_css_class', 'custom_nav_menu_li_classes', 50, 3); */
-
 function add_tailwind_classes_to_menu_links($atts, $page){
-  $normal = ' text-primary hover:text-secondary px-4 py-2';
-  $active = ' bg-red-500 dark:bg-gray-800';
+  $normal = 'hover:text-zinc-500 dark:text-neutral dark:hover:text-zinc-500 px-4 py-2';
+  $active = ' bg-primary/70 rounded-lg px-4 py-2';
   $yavarClasses = (get_the_ID() == $page->ID) ? $active : $normal;
   // Check if 'class' key exists and is not null
   if (!isset($atts['class'])) {
@@ -188,3 +185,58 @@ function add_tailwind_classes_to_menu_links($atts, $page){
   return $atts;
 }
 add_filter('page_menu_link_attributes', 'add_tailwind_classes_to_menu_links', 10, 2);
+
+function register_slide_post_type() {
+  $labels = array(
+      'name'                  => __( 'Slides', 'textdomain' ),
+      'singular_name'         => __( 'Slide', 'textdomain' ),
+      'menu_name'             => __( 'Slides', 'textdomain' ),
+      'add_new'               => __( 'Add New Slide', 'textdomain' ),
+      'add_new_item'          => __( 'Add New Slide', 'textdomain' ),
+      'edit_item'             => __( 'Edit Slide', 'textdomain' ),
+      'new_item'              => __( 'New Slide', 'textdomain' ),
+      'view_item'             => __( 'View Slide', 'textdomain' ),
+      'search_items'          => __( 'Search Slides', 'textdomain' ),
+      'not_found'             => __( 'No slides found', 'textdomain' ),
+      'not_found_in_trash'    => __( 'No slides found in Trash', 'textdomain' ),
+  );
+
+  $args = array(
+      'labels'                => $labels,
+      'public'                => true,
+      'has_archive'           => false,
+      'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ), // پشتیبانی از عنوان، محتوا، تصویر شاخص و فیلدهای سفارشی
+      'menu_icon'             => 'dashicons-slides',
+      'show_in_rest'          => false, // برای گوتنبرگ
+  );
+
+  register_post_type( 'slide', $args );
+}
+add_action( 'init', 'register_slide_post_type' );
+
+function register_slider_taxonomy() {
+  $labels = array(
+      'name'                       => __( 'Slider Groups', 'textdomain' ),
+      'singular_name'              => __( 'Slider Group', 'textdomain' ),
+      'search_items'               => __( 'Search Slider Groups', 'textdomain' ),
+      'all_items'                  => __( 'All Slider Groups', 'textdomain' ),
+      'edit_item'                  => __( 'Edit Slider Group', 'textdomain' ),
+      'update_item'                => __( 'Update Slider Group', 'textdomain' ),
+      'add_new_item'               => __( 'Add New Slider Group', 'textdomain' ),
+      'new_item_name'              => __( 'New Slider Group Name', 'textdomain' ),
+      'menu_name'                  => __( 'Slider Groups', 'textdomain' ),
+  );
+
+  $args = array(
+      'hierarchical'               => false, // غیرسلسله‌مراتبی (برای سلسله‌مراتبی true کنید و برچسب‌های parent را اضافه کنید)
+      'labels'                     => $labels,
+      'show_ui'                    => true,
+      'show_admin_column'          => true,
+      'query_var'                  => true,
+      'show_in_rest'               => true, // برای REST API و گوتنبرگ
+      'rewrite'                    => array( 'slug' => 'slider_group' ),
+  );
+
+  register_taxonomy( 'slider_group', array( 'slide' ), $args ); // اتصال به post type 'slide'
+}
+add_action( 'init', 'register_slider_taxonomy' );

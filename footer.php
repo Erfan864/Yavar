@@ -22,7 +22,7 @@ wp_footer(); ?>
      This is the main footer content area.
      It uses Tailwind CSS classes for responsive layout and styling.
 -->
-<footer class="flex-none flex size-full justify-center items-center py-5 bg-gray-300">
+<footer class="flex-none flex size-full justify-center items-center py-5 bg-neutral dark:bg-zinc-950 dark:text-neutral">
     
     <!-- ============================================================================
          FOOTER TEXT
@@ -31,8 +31,17 @@ wp_footer(); ?>
          Display footer text content.
          Currently shows a placeholder message in Persian.
     -->
-    <p>این یک فوتر است</p>
-    
+         <div class="flex h-[20vh]">
+          <div class="basis1/3">
+
+          </div>
+          <div class="basis1/3">
+
+          </div>
+          <div class="basis1/3">
+               
+          </div>
+         </div>
 </footer>
 
 <!-- ============================================================================

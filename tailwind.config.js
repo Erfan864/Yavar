@@ -11,14 +11,16 @@ export default {
     extend: {
       fontFamily: {
         'sans': ['system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-        'pahlavan': ['var(--font-pahlavan)'],
+        'test': ['var(--font-test)'],
         'iranyekanx': ['var(--font-iranyekanx)'],
       },
       colors: {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)',
         tertiary: 'var(--color-tertiary)',
         quaternary: 'var(--color-quaternary)',
+        neutral: 'var(--color-neutral)',
       },
     },
   },
