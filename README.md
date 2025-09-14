@@ -61,138 +61,87 @@
   <p>برای عملکرد کامل این تم، افزونه‌های زیر باید نصب و فعال‌سازی شوند:</p>
   <p dir="ltr">For the complete functionality of this theme, the following plugins must be installed and activated:</p>
   <ol>
-    <li><strong>ووکامرس (WooCommerce)</strong>: برای مدیریت فروشگاه و تراکنش‌های تجاری</li>
-    <li><strong>ووکامرس فارسی (Persian WooCommerce)</strong>: برای فارسی‌سازی کامل ووکامرس</li>
     <li><strong>Show Current Template</strong>: برای نمایش قالب فعلی در حال استفاده</li>
     <li><strong>WP Hooks Finder</strong>: برای یافتن و بررسی هوک‌های وردپرس</li>
+    <li><strong>Contact Form 7</strong>: برای ایجاد و مدیریت فرم‌های تماس</li>
+    <li><strong>CFDB7</strong>: برای ذخیره و مدیریت داده‌های فرم‌های تماس</li>
+    <li><strong>User Role Editor</strong>: برای مدیریت نقش‌ها و دسترسی‌های کاربران</li>
   </ol>
   <ol dir="ltr">
-    <li dir="ltr"><strong>WooCommerce</strong>: For managing the online store and e-commerce transactions</li>
-    <li dir="ltr"><strong>Persian WooCommerce</strong>: For complete Persian localization of WooCommerce</li>
-    <li dir="ltr"><strong>Show Current Template</strong>: For displaying the current template being used</li>
-    <li dir="ltr"><strong>WP Hooks Finder</strong>: For finding and examining WordPress hooks</li>
+    <li dir="ltr"><strong>Show Current Template</strong>: To show the current template in use</li>
+    <li dir="ltr"><strong>WP Hooks Finder</strong>: To find and check WordPress hooks</li>
+    <li dir="ltr"><strong>Contact Form 7</strong>: To create and manage contact forms</li>
+    <li dir="ltr"><strong>CFDB7</strong>: To store and manage contact form data</li>
+    <li dir="ltr"><strong>User Role Editor</strong>: To manage user roles and permissions</li>
   </ol>
   <hr />
-  <h2 id="contribution">🤝 مشارکت</h2>
-  <h2 id="contribution-en" dir="ltr">🤝 Contribution</h2>
-  <p>مشارکت شما در این پروژه مورد استقبال است! اگر مشکلی پیدا کردید یا پیشنهادی برای بهبود دارید، لطفاً یک Issue باز کنید یا یک Pull Request ارسال نمایید.</p>
-  <p dir="ltr">Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.</p>
+  <h2 id="site-settings">📄 Site Settings</h2>
+  <h2 id="site-settings-fa">📄 تنظیمات سایت</h2>
+  <p>To complete the initial setup and match the theme's default appearance, follow these steps to configure your logo, menus, and date/time formats.</p>
+  <p>برای تکمیل راه‌اندازی اولیه و هماهنگ شدن با ظاهر پیش‌فرض تم، مراحل زیر را برای تنظیمات لوگو، فهرست‌ها و فرمت تاریخ و زمان دنبال کنید.</p>
+
   <hr />
-  <h2 id="description">🐯 توضیحات</h2>
-  <h2 id="description-en" dir="ltr">🐯 Description</h2>
-  <pre dir="ltr"><code>USER_NAME: saeedierfan86
-USER_PASS: Sme@84000
-DB_USERNAME: root
-DB_PASSWORD: 
-DB_NAME: Yavar
-</code></pre>
+  <h3 id="logo-site-icon">🎨 Logo & Site Icon / لوگو و نمادک سایت</h3>
+  <p>To upload and set your site’s logo and icon, you need to use two separate sections in your WordPress dashboard.</p>
+  <p>برای بارگذاری و تنظیم لوگو و نمادک سایت خود، باید از دو بخش جداگانه در پنل مدیریت وردپرس استفاده کنید.</p>
+
+  <h4>1. Site Icon / نمادک سایت (Favicon)</h4>
+  <ul>
+    <li>Go to <strong>Settings &gt; General</strong>.</li>
+    <li>Find the <strong>Site Icon</strong> field at the bottom of the page to upload your icon.</li>
+    <li>Click <strong>Save Changes</strong>.</li>
+  </ul>
+  <p dir="rtl" class="text-right"><strong>نمادک سایت (Favicon):</strong></p>
+  <ul dir="rtl" class="text-right">
+    <li>از پنل مدیریت به بخش <strong>تنظیمات &gt; عمومی</strong> بروید.</li>
+    <li>در پایین صفحه، در قسمت <strong>نمادک سایت</strong>، آیکون مورد نظر خود را بارگذاری کنید.</li>
+    <li>بر روی <strong>ذخیره تغییرات</strong> کلیک کنید.</li>
+  </ul>
+
+  <h4>2. Site Logo / لوگو سایت</h4>
+  <ul>
+    <li>Go to <strong>Site Preview &gt; Customize &gt; Site Identity &gt; Logo</strong>.</li>
+    <li>Upload your site’s logo.</li>
+    <li>Click <strong>Publish</strong>.</li>
+  </ul>
+  <p dir="rtl" class="text-right"><strong>لوگو سایت:</strong></p>
+  <ul dir="rtl" class="text-right">
+    <li>به بخش <strong>بازدید سایت &gt; سفارشی‌سازی &gt; هویت سایت &gt; نشان</strong> بروید.</li>
+    <li>لوگوی سایت خود را بارگذاری کنید.</li>
+    <li>بر روی <strong>انتشار</strong> کلیک کنید.</li>
+  </ul>
+
   <hr />
-  <h3 dir="ltr"><a href="#a-complete-document-for-installing-tailwind-css-with-vite">Wordpress space</a></h3>
-  <h3><a href="#%D8%AF%D8%A7%DA%A9%DB%8C%D9%88%D9%85%D9%86%D8%AA-%DA%A9%D8%A7%D9%85%D9%84-%D9%86%D8%B5%D8%A8-tailwind-css-%D8%A8%D8%A7-vite">محیط وردپرس</a></h3>
- -----
+  <h3 id="menus">📋 Menus / فهرست‌ها</h3>
+  <p>To manage the website's navigation menus, use the customization panel.</p>
+  <p>برای مدیریت فهرست‌های ناوبری وب‌سایت، از پنل سفارشی‌سازی استفاده کنید.</p>
+  <h4>Header Menu / فهرست سربرگ (Header)</h4>
+  <ul>
+    <li>Go to <strong>Site Preview &gt; Customize &gt; Menus &gt; Header</strong>.</li>
+    <li>From here, you can add, remove, and reorder menu items.</li>
+    <li>Click <strong>Publish</strong> to save your changes.</li>
+  </ul>
+  <p dir="rtl" class="text-right"><strong>فهرست سربرگ (Header):</strong></p>
+  <ul dir="rtl" class="text-right">
+    <li>به بخش <strong>بازدید سایت &gt; سفارشی‌سازی &gt; فهرست‌ها &gt; Header</strong> بروید.</li>
+    <li>از اینجا می‌توانید آیتم‌های منو را اضافه، حذف یا مرتب کنید.</li>
+    <li>برای ذخیره تغییرات، بر روی <strong>انتشار</strong> کلیک کنید.</li>
+  </ul>
 
-## 📄 Site Settings
-
-## 📄 تنظیمات سایت
-
-To complete the initial setup and match the theme's default appearance, follow these steps to configure your logo, menus, and date/time formats.
-
-برای تکمیل راه‌اندازی اولیه و هماهنگ شدن با ظاهر پیش‌فرض تم، مراحل زیر را برای تنظیمات لوگو، فهرست‌ها و فرمت تاریخ و زمان دنبال کنید.
-
------
-
-### 🎨 Logo & Site Icon
-
-### 🎨 لوگو و نمادک سایت
-
-To upload and set your site’s logo and icon, you need to use two separate sections in your WordPress dashboard.
-
-برای بارگذاری و تنظیم لوگو و نمادک سایت خود، باید از دو بخش جداگانه در پنل مدیریت وردپرس استفاده کنید.
-
-1.  **Site Icon:**
-      * Go to **Settings > General**.
-      * Find the **Site Icon** field at the bottom of the page to upload your icon.
-      * Click **Save Changes**.
-
-<p dir="rtl" class="text-right"><strong>نمادک سایت (Favicon):</strong></p>
-<ul dir="rtl" class="text-right">
-<li>از پنل مدیریت به بخش **تنظیمات > عمومی** بروید.</li>
-<li>در پایین صفحه، در قسمت **نمادک سایت**، آیکون مورد نظر خود را بارگذاری کنید.</li>
-<li>بر روی **ذخیره تغییرات** کلیک کنید.</li>
-</ul>
-
-2.  **Site Logo:**
-      * Go to **Site Preview > Customize > Site Identity > Logo**.
-      * Upload your site’s logo.
-      * Click **Publish**.
-
-<p dir="rtl" class="text-right"><strong>لوگو سایت:</strong></p>
-<ul dir="rtl" class="text-right">
-<li>به بخش **بازدید سایت > سفارشی‌سازی > هویت سایت > نشان** بروید.</li>
-<li>لوگوی سایت خود را بارگذاری کنید.</li>
-<li>بر روی **انتشار** کلیک کنید.</li>
-</ul>
-
------
-
-### 📋 Menus
-
-### 📋 فهرست‌ها
-
-To manage the website's navigation menus, use the customization panel.
-
-برای مدیریت فهرست‌های ناوبری وب‌سایت، از پنل سفارشی‌سازی استفاده کنید.
-
-1.  **Header Menu:**
-      * Go to **Site Preview > Customize > Menus > Header**.
-      * From here, you can add, remove, and reorder menu items.
-      * Click **Publish** to save your changes.
-
-<p dir="rtl" class="text-right"><strong>فهرست سربرگ (Header):</strong></p>
-<ul dir="rtl" class="text-right">
-<li>به بخش **بازدید سایت > سفارشی‌سازی > فهرست‌ها > Header** بروید.</li>
-<li>از اینجا می‌توانید آیتم‌های منو را اضافه، حذف یا مرتب کنید.</li>
-<li>برای ذخیره تغییرات، بر روی **انتشار** کلیک کنید.</li>
-</ul>
-
------
-
-### 📅 Date and Time Format
-
-### 📅 فرمت تاریخ و زمان
-
-To ensure dates and times are displayed correctly, set the standard format in your general settings.
-
-برای اطمینان از نمایش صحیح تاریخ و زمان، فرمت استاندارد را در تنظیمات عمومی خود تنظیم کنید.
-
-1.  **Date Format:**
-
-      * Go to **Settings > General > Date Format**.
-      * Select `Y-m-d`.
-
-2.  **Time Format:**
-
-      * Go to **Settings > General > Time Format**.
-      * Select `H:i`.
-      * Click **Save Changes**.
-
-<p dir="rtl" class="text-right"><strong>فرمت تاریخ و زمان:</strong></p>
-<ul dir="rtl" class="text-right">
-<li>به بخش **تنظیمات > عمومی > ساختار تاریخ** بروید و `Y-m-d` را انتخاب کنید.</li>
-<li>سپس به بخش **تنظیمات > عمومی > ساختار زمان** بروید و `H:i` را انتخاب کنید.</li>
-<li>در نهایت، بر روی **ذخیره تغییرات** کلیک کنید.</li>
-</ul>
   <hr />
-  <h3 dir="ltr"><a href="#a-complete-document-for-installing-tailwind-css-with-vite">A Complete Document for Installing Tailwind CSS with Vite</a></h3>
-  <h3><a href="#%D8%AF%D8%A7%DA%A9%DB%8C%D9%88%D9%85%D9%86%D8%AA-%DA%A9%D8%A7%D9%85%D9%84-%D9%86%D8%B5%D8%A8-tailwind-css-%D8%A8%D8%A7-vite">داکیومنت کامل نصب Tailwind CSS با Vite</a></h3>
-  <h4 dir="ltr"><a href="#prerequisites-installing-nodejs-and-npm">1. Prerequisites: Installing Node.js and npm</a></h4>
-  
-  <h4><a href="#%D9%BE%DB%8C%D8%B4%D9%86%DB%8C%D8%A7%D8%B2%D9%87%D8%A7-%D9%86%D8%B5%D8%A8-nodejs-%D9%88-npm">1. پیش‌نیازها: نصب Node.js و npm</a></h4>
+  <h3 id="date-time">📅 Date and Time Format / فرمت تاریخ و زمان</h3>
+  <p>To ensure dates and times are displayed correctly, set the standard format in your general settings.</p>
+  <p>برای اطمینان از نمایش صحیح تاریخ و زمان، فرمت استاندارد را در تنظیمات عمومی خود تنظیم کنید.</p>
+  <ol>
+    <li><strong>Date Format:</strong> Go to <strong>Settings &gt; General &gt; Date Format</strong> and select <code>Y-m-d</code>.</li>
+    <li><strong>Time Format:</strong> Go to <strong>Settings &gt; General &gt; Time Format</strong> and select <code>H:i</code>, then click <strong>Save Changes</strong>.</li>
+  </ol>
 
+  <hr />
+  <h3 id="tailwind-vite">A Complete Document for Installing Tailwind CSS with Vite / داکیومنت کامل نصب Tailwind CSS با Vite</h3>
+  <h4 id="prerequisites-installing-nodejs-and-npm">1. Prerequisites: Installing Node.js and npm / پیش‌نیازها: نصب Node.js و npm</h4>
   <p dir="ltr">To run <code>npm</code> (Node Package Manager) commands and use modern web development tools like Vite, you first need to install <strong>Node.js</strong> on your system. NPM is installed automatically with Node.js.</p>
-  
   <p>برای اجرای دستورات <code>npm</code> (Node Package Manager) و استفاده از ابزارهای مدرن توسعه‌ی وب مانند Vite، ابتدا باید <strong>Node.js</strong> را روی سیستم خود نصب کنید. NPM همراه با Node.js نصب می‌شود.</p>
-  
   <ul>
     <li dir="ltr"><strong>Installing Node.js</strong>: Go to the official Node.js website and download and install the <strong>LTS</strong> (Long Term Support) version.</li>
     <li><strong>نصب Node.js</strong>: به وب‌سایت رسمی Node.js بروید و نسخه <strong>LTS</strong> (پشتیبانی بلندمدت) را دانلود و نصب کنید.</li>
@@ -202,9 +151,9 @@ To ensure dates and times are displayed correctly, set the standard format in yo
   <pre dir="ltr"><code>node -v
 npm -v
 </code></pre>
+
   <hr />
-  <h4><a href="#%D8%A7%D8%AC%D8%B1%D8%A7%DB%8C-%D9%BE%D8%B1%D9%88%DA%98%D9%87">2. اجرای پروژه</a></h4>
-  <h4 dir="ltr"><a href="#running-the-project">2. Running the Project</a></h4>
+  <h4 id="running-the-project">2. Running the Project / اجرای پروژه</h4>
   <p>اکنون، پروژه آماده‌ی اجرا است.</p>
   <p dir="ltr">Now, your project is ready to run.</p>
   <ul>
@@ -212,7 +161,7 @@ npm -v
     <li dir="ltr"><strong>Running the Development Server</strong>:</li>
   </ul>
   <pre dir="ltr"><code>npm run build
-  npm run dev
+npm run dev
 </code></pre>
   <p>با اجرای این دستور، Vite یک سرور توسعه‌ی محلی راه‌اندازی می‌کند و Tailwind CSS به طور خودکار کلاس‌های مورد نیاز را تولید و به CSS نهایی اضافه می‌کند.</p>
   <p dir="ltr">By running this command, Vite will start a local development server, and Tailwind CSS will automatically generate and add the necessary classes to your final CSS.</p>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ============================================================================
  * FOOTER.PHP - FOOTER TEMPLATE
@@ -22,26 +23,92 @@ wp_footer(); ?>
      This is the main footer content area.
      It uses Tailwind CSS classes for responsive layout and styling.
 -->
-<footer class="flex-none flex size-full justify-center items-center py-5 bg-neutral dark:bg-zinc-950 dark:text-neutral">
-    
-    <!-- ============================================================================
+<footer class="flex-none flex size-full justify-center items-center py-5 bg-beige-300 dark:bg-sea-700/50 text-sea-600 dark:text-beige-100">
+
+     <!-- ============================================================================
          FOOTER TEXT
          ============================================================================
          
          Display footer text content.
          Currently shows a placeholder message in Persian.
     -->
-         <div class="flex h-[20vh]">
-          <div class="basis1/3">
+     <div class="flex md:flex-row w-full gap-2 lg:gap-4 mx-5">
+          <div class="basis-1/4 flex flex-col items-center">
+               <?php if (function_exists("the_custom_logo")) {
+                    the_custom_logo();
+               } ?>
+          </div>
+          <div class="basis-1/4 flex flex-col items-start gap-2">
+               <h1 class="text-2xl font-bold mr-3">اطلاعات</h1>
+               <?php wp_nav_menu([
+                    "theme_location" => 'footer_menu_1',
+                    "menu_class" => "footer-nav-1",
+                    "container" => false
+               ]);
+               ?>
+          </div>
+          <div class="basis-1/4 flex flex-col items-start gap-2">
+               <h1 class="text-2xl font-bold mr-3">کاربران</h1>
+               <?php wp_nav_menu([
+                    "theme_location" => 'footer_menu_2',
+                    "menu_class" => "footer-nav-2",
+                    "container" => false
+               ]);
+               ?>
+          </div>
+          <div class="basis-1/4 flex flex-col items-start gap-2">
+               <h1 class="text-2xl font-bold mr-3">ارتباط با ما</h1>
+               <?php
+               $facebook_url = get_theme_mod('yavar_facebook');
+               $twitter_url = get_theme_mod('yavar_twitter');
+               $linkedin_url = get_theme_mod('yavar_linkedin');
+               $instagram_url = get_theme_mod('yavar_instagram');
+               $github_url = get_theme_mod('yavar_github');
+               ?>
+               <div class="flex flex-col items-start gap-2">
+                    <span>
+                         <i class="text-xl uil uil-phone"></i>
+                         09944685007
+                    </span>
+                    <span>
+                         <i class="text-xl uil uil-map-pin-alt"></i>
+                         دانشگاه فردوسی مشهد، دانشکده مهندسی، مرکز فناوری‌های پیشرفته شماره سه
+                    </span>
+                    <div id="neshanMapContainer" class="h-40 w-full rounded-lg"></div>
+                    <div class="social-media-links text-xl flex gap-3 self-center">
+                         <?php if ($facebook_url) : ?>
+                              <a href="<?php echo esc_url($facebook_url); ?>" target="_blank">
+                                   <i class="uil uil-facebook-f"></i>
+                              </a>
+                         <?php endif; ?>
 
-          </div>
-          <div class="basis1/3">
+                         <?php if ($twitter_url) : ?>
+                              <a href="<?php echo esc_url($twitter_url); ?>" target="_blank">
+                                   <i class="uil uil-twitter-alt"></i>
+                              </a>
+                         <?php endif; ?>
 
+                         <?php if ($linkedin_url) : ?>
+                              <a href="<?php echo esc_url($linkedin_url); ?>" target="_blank">
+                                   <i class="uil uil-linkedin-alt"></i>
+                              </a>
+                         <?php endif; ?>
+
+                         <?php if ($instagram_url) : ?>
+                              <a href="<?php echo esc_url($instagram_url); ?>" target="_blank">
+                                   <i class="uil uil-instagram"></i>
+                              </a>
+                         <?php endif; ?>
+
+                         <?php if ($github_url) : ?>
+                              <a href="<?php echo esc_url($github_url); ?>" target="_blank">
+                                   <i class="uil uil-github-alt"></i>
+                              </a>
+                         <?php endif; ?>
+                    </div>
+               </div>
           </div>
-          <div class="basis1/3">
-               
-          </div>
-         </div>
+     </div>
 </footer>
 
 <!-- ============================================================================
@@ -52,4 +119,5 @@ wp_footer(); ?>
      These tags are essential for valid HTML structure.
 -->
 </body>
+
 </html>

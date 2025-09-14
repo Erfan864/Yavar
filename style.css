@@ -36,6 +36,27 @@
  */
 
 @theme {
+  --color-avocado-100: #ddeb9d;
+  --color-avocado-200: #a0c878;
+  --color-avocado-300: #84994f;
+  --color-avocado-400: #52734d;
+
+  --color-sea-100: #caf4ff;
+  --color-sea-200: #4cc9fe;
+  --color-sea-300: #5ab2ff;
+  --color-sea-400: #0ba6df;
+  --color-sea-500: #3396d3;
+  --color-sea-600: #143b54;
+  --color-sea-700: #1b262c;
+
+  --color-beige-100: #fff0ce;
+  --color-beige-200: #feefad;
+  --color-beige-300: #ebcb90;
+
+  --color-carrot-100: #feb941;
+  --color-carrot-200: #faa533;
+  --color-carrot-300: #ef7722;
+
   /* Primary brand color - used for main elements and highlights */
   --color-primary: #55b9bd;
 
@@ -75,13 +96,17 @@
 body {
   margin: 0; /* Remove default browser margins */
   padding: 0; /* Remove default browser padding */
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; /* Modern font stack */
+  font-family: IRANYekanX, Script; /* Modern font stack */
 }
 
 /* Remove default WordPress margins from main content area */
 .site-main {
   margin: 0; /* Remove WordPress default margins */
   padding: 0; /* Remove WordPress default padding */
+}
+
+footer .custom-logo-link img {
+  @apply !w-full;
 }
 
 /* Ensure Swiper is full-width with no margins or padding */
@@ -100,13 +125,89 @@ body {
 /* Custom Swiper Pagination */
 
 .swiper-pagination-bullet {
-  @apply bg-zinc-400 w-3 h-3 mx-1 rounded-full transition-all duration-300;
+  @apply !bg-sea-100 dark:!bg-beige-100 !opacity-50 w-3 h-3 mx-1 rounded-full transition-all duration-300;
 }
 
 .swiper-pagination-bullet-active {
-  @apply !bg-primary scale-125;
+  @apply !bg-sea-600 dark:!bg-beige-300 !opacity-100 scale-125;
 }
 
-.swiper-content p{
-  @apply text-zinc-900 dark:text-neutral text-base md:text-lg lg:text-2xl;
+.swiper-content p {
+  @apply text-beige-300 text-base md:text-lg lg:text-2xl;
+}
+
+.wpcf7-form-control {
+  @apply w-full border-2 border-transparent focus:border-primary transition-colors duration-300;
+}
+
+.wpcf7 {
+  @apply flex justify-center;
+}
+
+.wpcf7-form {
+  @apply w-4/5 space-y-4 p-6 rounded-lg shadow-xl bg-beige-300/50 dark:bg-sea-700/50 flex justify-center items-center gap-10;
+}
+
+.wpcf7-form p {
+  @apply flex flex-col items-start gap-1;
+}
+
+.wpcf7-form-control:not(.wpcf7-submit) {
+  @apply rounded-md py-2 px-4 text-sea-600 dark:text-beige-100 bg-beige-100/70 dark:bg-sea-600/70 placeholder-beige-300 dark:placeholder-sea-700;
+}
+
+.wpcf7-text,
+.wpcf7-email,
+.wpcf7-tel {
+  @apply h-12;
+}
+
+.wpcf7-textarea {
+  @apply h-40 resize-y;
+}
+
+.wpcf7-submit {
+  @apply bg-primary text-beige-100 px-6 py-3 rounded-lg font-bold shadow-md hover:opacity-80 transition-colors duration-300;
+}
+
+.wpcf7-response-output {
+  @apply text-sm mt-4 p-4 rounded-lg font-bold;
+}
+
+/* Validation styles */
+.wpcf7-form-control.wpcf7-not-valid {
+  @apply border-carrot-300 focus:border-carrot-300;
+}
+
+.wpcf7-not-valid-tip {
+  @apply text-carrot-300 text-xs mt-1 block;
+}
+
+.wpcf7-response-output.wpcf7-validation-errors {
+  @apply bg-carrot-100 text-carrot-300;
+}
+
+#neshanMapContainerAbout,
+.form-inputs {
+  @apply basis-1/2;
+}
+
+#neshanMapContainerAbout {
+  @apply h-100 rounded-2xl;
+}
+
+.form-inputs input {
+  @apply placeholder:text-right;
+}
+
+.form-inputs {
+  @apply flex flex-col gap-3 placeholder:text-right;
+}
+
+.form-inputs div p {
+  @apply !flex !flex-row  justify-center items-center gap-2;
+}
+
+.textarea-group span {
+  @apply w-full;
 }
