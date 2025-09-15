@@ -81,7 +81,7 @@ add_action('after_setup_theme', 'yavar_theme_setup');
  */
 function yavar_enqueue_styles()
 {
-  // Enqueue Icon
+  // Enqueue Map
   wp_enqueue_style(
     'Neshan',                              // Neshan Map
     "https://static.neshan.org/sdk/mapboxgl/v1.13.2/neshan-sdk/v1.0.8/index.css", // Map CSS file path
@@ -89,8 +89,8 @@ function yavar_enqueue_styles()
 
   // Enqueue Icon
   wp_enqueue_style(
-    'iconscout',                              // iconscout
-    "https://unicons.iconscout.com/release/v4.2.0/css/line.css", // Icon CSS file path
+    'tabler',                              // tabler
+    "https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css", // Icon CSS file path
   );
 
   // Enqueue IranYekan font (Persian web font)

@@ -166,3 +166,9 @@ npm run dev
   <p>با اجرای این دستور، Vite یک سرور توسعه‌ی محلی راه‌اندازی می‌کند و Tailwind CSS به طور خودکار کلاس‌های مورد نیاز را تولید و به CSS نهایی اضافه می‌کند.</p>
   <p dir="ltr">By running this command, Vite will start a local development server, and Tailwind CSS will automatically generate and add the necessary classes to your final CSS.</p>
 </div>
+<hr/>
+<div dir="rtl">
+  <h2 id="yavar-service-website-en">بایگانی مسیر</h2>
+  <h2 id="yavar-service-website" dir="ltr">Archives of road</h2>
+  <p>برای دیدن مستندات به <code>./roadmap_archive/</code> مراجعه کنید و تمامی عکس های مربوط به طراحی و صفحه بندی را ملاحظه کنید.</p>
+  <p dir="ltr">To view the Archive, visit <code>./roadmap_archive/</code> and see all the design and layout photos.</p>

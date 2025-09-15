@@ -145,15 +145,18 @@ footer .custom-logo-link img {
 }
 
 .wpcf7-form {
-  @apply w-4/5 space-y-4 p-6 rounded-lg shadow-xl bg-beige-300/50 dark:bg-sea-700/50 flex justify-center items-center gap-10;
+  @apply w-4/5 space-y-4 p-6 rounded-lg shadow-xl bg-beige-300 dark:bg-sea-700/50 flex justify-center items-center gap-10;
 }
 
 .wpcf7-form p {
   @apply flex flex-col items-start gap-1;
 }
 
-.wpcf7-form-control:not(.wpcf7-submit) {
-  @apply rounded-md py-2 px-4 text-sea-600 dark:text-beige-100 bg-beige-100/70 dark:bg-sea-600/70 placeholder-beige-300 dark:placeholder-sea-700;
+.wpcf7-form-control:not(.wpcf7-submit),
+.um-form-field.valid,
+.um-account-link,
+.um-profile-nav {
+  @apply !rounded-md !py-2 !px-4 !text-sea-600 dark:!text-beige-100 !bg-beige-100 dark:!bg-sea-600 !shadow-md !shadow-sea-600 dark:!shadow-beige-100 !placeholder-neutral-600 dark:!placeholder-neutral;
 }
 
 .wpcf7-text,
@@ -210,4 +213,75 @@ footer .custom-logo-link img {
 
 .textarea-group span {
   @apply w-full;
+}
+
+.um-form {
+  @apply bg-beige-300 dark:bg-sea-700 p-4 rounded-lg mx-3 lg:mx-5;
+}
+
+.um-button {
+  @apply !bg-primary;
+}
+
+.um-form form {
+  @apply flex justify-center items-start gap-4;
+}
+
+.um:not(.um-admin) {
+  @apply !text-sea-600 dark:!text-beige-100;
+}
+
+.um-misc-with-img {
+  @apply !border-sea-600 dark:!border-beige-100;
+}
+
+.um-account-main div.um-account-heading,
+.um .um-field-label,
+.um-account-name a,
+.um-account-side li a span.um-account-title {
+  @apply !text-sea-600 dark:!text-beige-100;
+}
+
+.um-account-side ul {
+  @apply flex flex-col items-stretch justify-center gap-2 *:!bg-none;
+}
+
+.um-account-side ul li{
+  @apply bg-neutral/0;
+}
+
+.um-account-link.current i{
+  @apply !text-primary;
+}
+
+.um-login form,
+.um-register form {
+  @apply flex-col items-stretch;
+}
+
+.um-cover.um-trigger-menu-on-click,
+.um-cover-add,
+.um-cover-e,
+.um-cover.has-cover {
+  @apply !h-60;
+}
+
+.um-cover-e img {
+  @apply size-full;
+}
+
+.um-cover.has-cover{
+  @apply rounded-lg overflow-hidden;
+}
+
+.um-profile-nav>div>a {
+  @apply !text-sea-600 dark:!text-beige-100 flex items-start;
+}
+
+.um .um-profile-nav-item.active a {
+  @apply !bg-primary;
+}
+
+.um-header {
+  @apply !border-0;
 }

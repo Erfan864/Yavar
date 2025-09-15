@@ -66,43 +66,43 @@ wp_footer(); ?>
                $github_url = get_theme_mod('yavar_github');
                ?>
                <div class="flex flex-col items-start gap-2">
-                    <span>
-                         <i class="text-xl uil uil-phone"></i>
-                         09944685007
-                    </span>
-                    <span>
-                         <i class="text-xl uil uil-map-pin-alt"></i>
-                         دانشگاه فردوسی مشهد، دانشکده مهندسی، مرکز فناوری‌های پیشرفته شماره سه
-                    </span>
+                    <div class="flex gap-1 items-center">
+                         <i class="text-2xl font-bold ti ti-phone"></i>
+                         <span>09944685007</span>
+                    </div>
+                    <div class="flex gap-1 items-start">
+                         <i class="text-2xl font-bold ti ti-map-pin"></i>
+                         <span>مشهد، هاشمیه 2، پلاک 10</span>
+                    </div>
                     <div id="neshanMapContainer" class="h-40 w-full rounded-lg"></div>
                     <div class="social-media-links text-xl flex gap-3 self-center">
                          <?php if ($facebook_url) : ?>
                               <a href="<?php echo esc_url($facebook_url); ?>" target="_blank">
-                                   <i class="uil uil-facebook-f"></i>
+                                   <i class="text-2xl font-bold ti ti-brand-facebook"></i>
                               </a>
                          <?php endif; ?>
 
                          <?php if ($twitter_url) : ?>
                               <a href="<?php echo esc_url($twitter_url); ?>" target="_blank">
-                                   <i class="uil uil-twitter-alt"></i>
+                                   <i class="text-2xl font-bold ti ti-brand-x"></i>
                               </a>
                          <?php endif; ?>
 
                          <?php if ($linkedin_url) : ?>
                               <a href="<?php echo esc_url($linkedin_url); ?>" target="_blank">
-                                   <i class="uil uil-linkedin-alt"></i>
+                                   <i class="text-2xl font-bold ti ti-brand-linkedin"></i>
                               </a>
                          <?php endif; ?>
 
                          <?php if ($instagram_url) : ?>
                               <a href="<?php echo esc_url($instagram_url); ?>" target="_blank">
-                                   <i class="uil uil-instagram"></i>
+                                   <i class="text-2xl font-bold ti ti-brand-instagram"></i>
                               </a>
                          <?php endif; ?>
 
                          <?php if ($github_url) : ?>
                               <a href="<?php echo esc_url($github_url); ?>" target="_blank">
-                                   <i class="uil uil-github-alt"></i>
+                                   <i class="text-2xl font-bold ti ti-brand-github"></i>
                               </a>
                          <?php endif; ?>
                     </div>

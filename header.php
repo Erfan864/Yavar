@@ -107,20 +107,29 @@ if (!defined('ABSPATH')) {
                 ?>
                 <div class="flex-shrink-0 flex justify-center items-center gap-2">
                     <div class="flex justify-center items-center gap-2">
-                        <?php if (is_user_logged_in()) { ?>
-                            <a href="<?php echo wp_logout_url(home_url()); ?>" class="header-link logout-link bg-secondary px-3 py-1.5 rounded-lg text-beige-100">خروج</a>
-                        <?php } else { ?>
-                            <a href="<?php echo wc_get_page_permalink('myaccount'); ?>" class="header-link login-link bg-secondary px-3 py-1.5 rounded-lg text-beige-100">ورود</a>
-                            <a href="<?php echo wc_get_page_permalink('myaccount'); ?>#register" class="header-link register-link bg-secondary px-3 py-1.5 rounded-lg text-beige-100">ثبت‌نام</a>
-                        <?php } ?>
+                        <?php
+                        // چک کردن اینکه آیا کاربر وارد شده است یا خیر
+                        if (is_user_logged_in()) {
+                            // اگر کاربر وارد شده است، دکمه "خروج" را نمایش بده
+                        ?>
+                            <a href="<?php echo um_get_core_page('login'); ?>" class="header-link logout-link bg-secondary px-3 py-1.5 rounded-lg text-beige-100">خروج</a>
+                        <?php
+                        } else {
+                            // اگر کاربر وارد نشده است، دکمه‌های "ورود" و "ثبت‌نام" را نمایش بده
+                        ?>
+                            <a href="<?php echo um_get_core_page('login'); ?>" class="header-link login-link bg-secondary px-3 py-1.5 rounded-lg text-beige-100">ورود</a>
+                            <a href="<?php echo um_get_core_page('register'); ?>" class="header-link register-link bg-secondary px-3 py-1.5 rounded-lg text-beige-100">ثبت‌نام</a>
+                        <?php
+                        }
+                        ?>
                     </div>
 
                     <button id="theme-switch" class="size-12">
                         <div class="text-5xl block dark:hidden">
-                            <i class="uil uil-sun"></i>
+                            <i class="ti ti-sun"></i>
                         </div>
                         <div class="text-5xl dark:block hidden">
-                            <i class="uil uil-moon"></i>
+                            <i class="ti ti-moon"></i>
                         </div>
                     </button>
                 </div>

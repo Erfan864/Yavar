@@ -26,7 +26,7 @@ const neshanMarkerColor = "#EB5E60";
  * https://neshan.org/maps
  *
  * */
-const mapCenterLocation = [59.515385299958695,36.3219370667782]; //latitude,longitude
+const mapCenterLocation = [59.515385299958695, 36.3219370667782]; //latitude,longitude
 
 // show poi and traffic on map
 /* در صورتی که میخواید بر روی نقشه خود اطلاعات ترافیکی به همراه مکان های مختلف مثل مغازه ها، مجتمع ها، فروشگاه ها، بیمارستان ها و ... نیز نمایش داده شوند کافیست مقادیر را مانند زیر تغییر نمائید */
@@ -47,49 +47,46 @@ const mapZoom = 13;
 // Create map object
 const createMapObj = (container, TypeControllerStatus) => {
   // بررسی کنید که container مقداردهی شده باشد
-  if (!container) {
-    console.error("Map container is not defined.");
-    return; // از اجرای تابع خارج شوید
-  }
+  if (container) {
+    let map = new nmp_mapboxgl.Map({
+      mapType: mapType,
+      container: container,
+      zoom: mapZoom,
+      pitch: 0,
+      center: mapCenterLocation,
+      minZoom: 2,
+      maxZoom: 21,
+      trackResize: true,
+      mapKey: API_KEY,
+      poi: poi,
+      traffic: traffic,
+      mapTypeControllerStatus: {
+        show: TypeControllerStatus,
+        position: "bottom-right",
+      },
+    });
 
-  let map = new nmp_mapboxgl.Map({
-    mapType: mapType,
-    container: container,
-    zoom: mapZoom,
-    pitch: 0,
-    center: mapCenterLocation,
-    minZoom: 2,
-    maxZoom: 21,
-    trackResize: true,
-    mapKey: API_KEY,
-    poi: poi,
-    traffic: traffic,
-    mapTypeControllerStatus: {
-      show: TypeControllerStatus,
-      position: "bottom-right",
-    },
-  });
+    // get user location on map
+    /* در صورتی که نیازی ندارید که موقعیت کاربر را دریافت کنید میتوانید کد های این قسمت را پاک نماید */
+    map.addControl(
+      new nmp_mapboxgl.GeolocateControl({
+        positionOptions: { enableHighAccuracy: true },
+        trackUserLocation: true,
+        showUserHeading: true,
+      })
+    );
+    /* پایان قسمت کد های گرفتن موقعیت کاربر  */
 
-  // get user location on map
-  /* در صورتی که نیازی ندارید که موقعیت کاربر را دریافت کنید میتوانید کد های این قسمت را پاک نماید */
-  map.addControl(
-    new nmp_mapboxgl.GeolocateControl({
-      positionOptions: { enableHighAccuracy: true },
-      trackUserLocation: true,
-      showUserHeading: true,
+    // add marker to the map
+    /* در صورتی که نیازی به افزودن مارکر بر روی نقشه خود ندارید می توانید کد های این قسمت را پاک نمائید  */
+    const marker = new nmp_mapboxgl.Marker({
+      color: neshanMarkerColor,
+      draggable: false,
     })
-  );
-  /* پایان قسمت کد های گرفتن موقعیت کاربر  */
-
-  // add marker to the map
-  /* در صورتی که نیازی به افزودن مارکر بر روی نقشه خود ندارید می توانید کد های این قسمت را پاک نمائید  */
-  const marker = new nmp_mapboxgl.Marker({
-    color: neshanMarkerColor,
-    draggable: false,
-  })
-    .setLngLat(mapCenterLocation)
-    .addTo(map);
-  /* پایان قسمت کد های افزودن مارکر به نقشه  */
+      .setLngLat(mapCenterLocation)
+      .addTo(map);
+    /* پایان قسمت کد های افزودن مارکر به نقشه  */
+  }
 };
 
 // Wait for DOM to be fully loaded
@@ -105,35 +102,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Initialize Swiper slider
-const swiperElement = document.querySelector(".swiper");
-if (swiperElement) {
-  const swiper = new Swiper(swiperElement, {
-    direction: "horizontal",
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 0,
+  const swiperElement = document.querySelector(".swiper");
+  if (swiperElement) {
+    const swiper = new Swiper(swiperElement, {
+      direction: "horizontal",
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
       },
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
-      1024: {
-        slidesPerView: 1,
-        spaceBetween: 0,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
       },
-    },
-  });
-}
+    });
+  }
 
   // Theme Mode Switcher
   document.documentElement.classList.toggle(
@@ -194,7 +191,7 @@ if (swiperElement) {
     createMapObj(mapContainer, false);
     createMapObj(mapContainerAbout, true);
   };
-  
+
   const setLightMode = () => {
     document.body.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");

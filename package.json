@@ -26,7 +26,9 @@
     "vite": "^7.0.6"
   },
   "dependencies": {
+    "@tabler/icons-webfont": "^3.34.1",
     "@tailwindcss/vite": "^4.1.12",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "tabler": "^1.0.0"
   }
 }
