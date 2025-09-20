@@ -57,7 +57,7 @@ if (!defined('ABSPATH')) {
      WordPress body_class() adds dynamic CSS classes based on current page.
 -->
 
-<body <?php body_class("min-h-screen bg-neutral dark:bg-sea-600 relative flex flex-col items-stretch transition-colors ease-in-out duration-300"); ?>>
+<body <?php body_class("min-h-screen bg-neutral dark:bg-sea-600 text-sea-600 dark:text-beige-100 relative flex flex-col items-stretch transition-colors ease-in-out duration-300"); ?>>
     <!-- ============================================================================
          HEADER SECTION
          ============================================================================

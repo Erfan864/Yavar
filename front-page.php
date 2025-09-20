@@ -105,21 +105,39 @@ get_header();
         <div class="flex flex-col items-center px-7 py-6 gap-5 w-4/5 rounded-xl bg-beige-300 dark:bg-sea-700">
             <h1 class="text-4xl font-bold">سوالات متداول</h1>
             <details class="w-full flex flex-col p-4 bg-beige-100 dark:bg-sea-600 shadow-md shadow-sea-600 dark:shadow-beige-100 rounded-lg">
-                <summary class="text-lg font-bold cursor-pointer">چطور می‌تونم مکان ورزشی خودم رو در یاور ثبت کنم؟</summary>
-                <div class="mr-4">
-                    <p>بله، بعد از ورود به پنل کاربری، می‌تونید اطلاعات قد، وزن و هدف‌تون رو وارد کنید تا مربیان و متخصصان تغذیه برنامه‌ای اختصاصی براتون طراحی کنن.</p>
-                </div>
-            </details>
-            <details class="w-full flex flex-col p-4 bg-beige-100 dark:bg-sea-600 shadow-md shadow-sea-600 dark:shadow-beige-100 rounded-lg">
                 <summary class="text-lg font-bold cursor-pointer">آیا می‌تونم برنامه تمرینی و غذایی شخصی داشته باشم؟</summary>
                 <div class="mr-4">
-                    <p>بله، بعد از ورود به پنل کاربری، می‌تونید اطلاعات قد، وزن و هدف‌تون رو وارد کنید تا مربیان و متخصصان تغذیه برنامه‌ای اختصاصی براتون طراحی کنن.</p>
+                    <p>بعد از ثبت‌نام در پنل شخصی‌تون، کافیست اطلاعات فردی خودتون (مثل قد، وزن و هدف) رو کامل کنید. دو روش پیش رو دارید: اول، می‌تونید برنامه‌های آماده سایت که بر اساس اطلاعات بدنی شما طراحی شدن رو خریداری کنید. دوم، با انتخاب مربی‌های داخل سایت و زدن دکمه "درخواست برنامه تمرینی یا غذایی"، مربی مربوطه اطلاعات شما رو بررسی کرده و نمونه اولیه برنامه رو ارسال می‌کنه. در هر دو روش، بعد از پرداخت وجه، برنامه شخصی‌تون به صورت کامل و با جزئیات در پنل شخصی قابل دسترسی خواهد بود</p>
                 </div>
             </details>
             <details class="w-full flex flex-col p-4 bg-beige-100 dark:bg-sea-600 shadow-md shadow-sea-600 dark:shadow-beige-100 rounded-lg">
-                <summary class="text-lg font-bold cursor-pointer">چطور می‌تونم قیمت مکان‌های ورزشی مختلف رو مقایسه کنم؟</summary>
+                <summary class="text-lg font-bold cursor-pointer">چطور می‌تونم مکان ورزشی خودم رو در یاور ثبت کنم؟</summary>
                 <div class="mr-4">
-                    <p>بله، بعد از ورود به پنل کاربری، می‌تونید اطلاعات قد، وزن و هدف‌تون رو وارد کنید تا مربیان و متخصصان تغذیه برنامه‌ای اختصاصی براتون طراحی کنن.</p>
+                    <p>بعد از ثبت‌نام در پنل شخصی‌تون، کافیست از قسمت سایدبار گزینه "مجموعه‌ها" رو انتخاب کنید، سپس با زدن دکمه "افزودن مجموعه جدید"، اطلاعات مکان‌تون (مثل آدرس، امکانات و تعرفه‌ها) رو به‌طور کامل وارد کنید. بعد از این مرحله، تیم ما اطلاعات رو بررسی می‌کنه و پس از تأیید، مجموعه شما در سایت قابل نمایش خواهد بود!</p>
+                </div>
+            </details>
+            <details class="w-full flex flex-col p-4 bg-beige-100 dark:bg-sea-600 shadow-md shadow-sea-600 dark:shadow-beige-100 rounded-lg">
+                <summary class="text-lg font-bold cursor-pointer">هزینه عضویت در یاور چقدره؟</summary>
+                <div class="mr-4">
+                    <p>عضویت پایه رایگانه و فقط برای خدمات اضافی مثل برنامه‌های غذایی و تمرینی و... هزینه جداگانه ای محاسبه میشواد که جزئیاتش رو می‌تونید در بخش تعرفه‌ها ببینید</p>
+                </div>
+            </details>
+            <details class="w-full flex flex-col p-4 bg-beige-100 dark:bg-sea-600 shadow-md shadow-sea-600 dark:shadow-beige-100 rounded-lg">
+                <summary class="text-lg font-bold cursor-pointer">وقتی خریدی مثل پنل اشتراکی، برنامه تمرینی یا غذایی انجام می‌دم، چطور میتونیم رسید پراختم رو دریافت می‌کنم؟</summary>
+                <div class="mr-4">
+                    <p>بعد از ثبت‌نام در پنل شخصی‌تون، کافیست وجه رو از طریق کیف پول پرداخت کنید. پس از پرداخت، رسید الکترونیک به پنل شما ارسال می‌شه و خیال‌تون راحت باشه که پرداختتون به‌درستی ثبت می‌شه</p>
+                </div>
+            </details>
+            <details class="w-full flex flex-col p-4 bg-beige-100 dark:bg-sea-600 shadow-md shadow-sea-600 dark:shadow-beige-100 rounded-lg">
+                <summary class="text-lg font-bold cursor-pointer">در صورت بروز مشکل، چطور می‌تونم با پشتیبانی ارتباط بر قرار کنم؟</summary>
+                <div class="mr-4">
+                    <p>بعد از ثبت‌نام در صفحه "ارتباط با ما"، با تیم ما ارتباط برقرار کنید. ما با کمال خوشحالی مشکل‌تون رو در اسرع وقت پیگیری می‌کنیم!</p>
+                </div>
+            </details>
+            <details class="w-full flex flex-col p-4 bg-beige-100 dark:bg-sea-600 shadow-md shadow-sea-600 dark:shadow-beige-100 rounded-lg">
+                <summary class="text-lg font-bold cursor-pointer">چطور می‌تونم فیدبک یا پیشنهادم رو برای بهبود سایت به شما بگم؟</summary>
+                <div class="mr-4">
+                    <p>بعد از ثبت‌نام در پنل شخصی‌تون، کافیست به قسمت "ارتباط با ما" برید و فیدبک یا پیشنهادتون رو ارسال کنید. با کمک شما می‌تونیم سایت رو بهتر کنیم و تجربه کاربری رو بهبود بدیم!</p>
                 </div>
             </details>
         </div>

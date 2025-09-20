@@ -107,16 +107,6 @@ function yavar_enqueue_styles()
     get_template_directory_uri() . "/assets/font/Script/script.css", // Font CSS file path
   );
 
-  // Enqueue main theme stylesheet
-  $style_path = get_template_directory_uri() . '/style.css';  // استفاده از URI به جای مسیر فایل
-  $style_version = filemtime(get_template_directory() . '/style.css');  // نسخه درست برای cache busting
-  wp_enqueue_style(
-    'yavar-style',                // Handle
-    $style_path,                  // URL درست
-    array(),                      // Dependencies
-    $style_version                // Version درست
-  );
-
   // This is the compiled CSS file that includes Tailwind CSS and custom styles
   // Fallback system: If compiled CSS doesn't exist, use source CSS
   $src_style_file = get_template_directory() . '/dist/styles.css';
@@ -426,3 +416,27 @@ function register_club_taxonomies()
   register_taxonomy('city', array('club'), $args_city);
 }
 add_action('init', 'register_club_taxonomies');
+
+
+// تغییر لوگوی صفحه لاگین
+function my_custom_login_logo() {
+  echo '
+  <style type="text/css">
+      #login h1 a {
+          background-image: url("' . get_stylesheet_directory_uri() . '/img/Yavar_logo.png");
+          background-size: contain;
+          width: 200px;
+          height: 120px;
+      }
+  </style>';
+}
+add_action('login_enqueue_scripts', 'my_custom_login_logo');
+ // تغییر لینک لوگو به صفحه اصلی سایت
+function my_custom_login_url() {
+  return home_url();
+}
+add_filter('login_headerurl', 'my_custom_login_url');
+
+
+
+

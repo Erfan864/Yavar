@@ -24,8 +24,7 @@
   * Import Tailwind CSS framework for utility-first styling.
   * This provides a comprehensive set of utility classes for rapid development.
   */
-
-@import "tailwindcss";
+  @import "tailwindcss";
 
 /* ============================================================================
  * CSS CUSTOM PROPERTIES (CSS VARIABLES)
