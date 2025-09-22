@@ -74,7 +74,7 @@ wp_footer(); ?>
                          <i class="text-2xl font-bold ti ti-map-pin"></i>
                          <span>مشهد، هاشمیه 2، پلاک 10</span>
                     </div>
-                    <div id="neshanMapContainer" class="h-40 w-full rounded-lg"></div>
+                    <div id="neshanMapContainer" class="h-40 w-60 rounded-lg"></div>
                     <div class="social-media-links text-xl flex gap-3 self-center">
                          <?php if ($facebook_url) : ?>
                               <a href="<?php echo esc_url($facebook_url); ?>" target="_blank">

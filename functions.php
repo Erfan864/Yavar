@@ -93,6 +93,11 @@ function yavar_enqueue_styles()
     "https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css", // Icon CSS file path
   );
 
+  wp_enqueue_style(
+    'iconscout',                              // iconscout
+    "https://unicons.iconscout.com/release/v4.2.0/css/line.css", // Icon CSS file path
+  );
+
   // Enqueue IranYekan font (Persian web font)
   // This font is used for Persian text display
   wp_enqueue_style(
